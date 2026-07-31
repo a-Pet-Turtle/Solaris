@@ -1,3 +1,5 @@
+# Solaris v2.18
+
 import pygame
 import math
 import configparser
@@ -5,7 +7,7 @@ import configparser
 WIDTH = 1280
 HEIGHT = 720
 
-G = 0.1
+G = 0.2
 
 pygame.init()
 
@@ -171,8 +173,8 @@ class Ship:
 
         # Space = brake
         if keys[pygame.K_SPACE]:
-            self.vx *= 0.95
-            self.vy *= 0.95
+            self.vx *= 0.8
+            self.vy *= 0.8
 
         # Print Coords
         if keys[pygame.K_c]:
