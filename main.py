@@ -174,6 +174,10 @@ class Ship:
             self.vx *= 0.95
             self.vy *= 0.95
 
+        # Print Coords
+        if keys[pygame.K_c]:
+            print(self.x, self.y)
+
         self.x += self.vx
         self.y += self.vy
 
@@ -508,6 +512,9 @@ while running:
                 (WIDTH, HEIGHT),
                 pygame.RESIZABLE
             )
+
+        if event.type == pygame.K_c:
+            print(str(ship.x)+", "+str(ship.y))
 
     result = check_collisions(ship, bodies)
 
